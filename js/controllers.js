@@ -30,8 +30,32 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 //     title: 'Concerts',
 //     src: 'img/concerts.jpg'
 //   }];
-//
-// })
+
+})
+
+.controller('CartController', function($scope, TemplateService, NavigationService, $timeout) {
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("cart");
+  $scope.menutitle = NavigationService.makeactive("Cart");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+})
+
+.controller('LikeController', function($scope, TemplateService, NavigationService, $timeout) {
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("like");
+  $scope.menutitle = NavigationService.makeactive("Like");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+})
+
+.controller('ProductdetailController', function($scope, TemplateService, NavigationService, $timeout) {
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("productdetail");
+  $scope.menutitle = NavigationService.makeactive("Product Detail");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+})
 
 .controller('HeaderController', function($scope, TemplateService) {
   $scope.template = TemplateService;

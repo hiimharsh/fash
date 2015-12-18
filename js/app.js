@@ -18,6 +18,21 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
         templateUrl: "views/template.html",
         controller: 'HomeController'
     })
+    .state('cart', {
+        url: "/cart",
+        templateUrl: "views/template.html",
+        controller: 'CartController'
+    })
+    .state('like', {
+        url: "/like",
+        templateUrl: "views/template.html",
+        controller: 'LikeController'
+    })
+    .state('productdetail', {
+        url: "/productdetail",
+        templateUrl: "views/template.html",
+        controller: 'ProductdetailController'
+    })
 
     $urlRouterProvider.otherwise("/home");
 

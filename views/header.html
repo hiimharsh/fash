@@ -1,19 +1,26 @@
-<header ng-controller="HeaderController">
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <button aria-expanded="false" class="navbar-toggle collapsed" data-target="#nav-collapse" data-toggle="collapse" type="button">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="links">
+          <ul>
+            <li><a href="">Recently Viewed</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Login</a></li>
+            <li><a href="">Register</a></li>
+            <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest"></i></a></li>
+          </ul>
+        </div>
       </div>
-
-      <div class="collapse navbar-collapse" id="nav-collapse">
-        <div class="template menu" ng-include="template.menu"></div>
+      <div class="col-md-offset-5 col-md-2">
+        <ul>
+          <li><a href=""><i class="fa fa-bell"></i></a></li>
+          <li><a href=""><i class="fa fa-heart"></i></a></li>
+          <li><a href="/#/cart"><i class="fa fa-shopping-cart"></i></a></li>
+        </ul>
       </div>
-
     </div>
-  </nav>
+  </div>
 </header>
