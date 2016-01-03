@@ -41,6 +41,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   $scope.navigation = NavigationService.getnav();
 })
 
+.controller('MagController', function($scope, TemplateService, NavigationService, $timeout) {
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("mag");
+  $scope.menutitle = NavigationService.makeactive("Mag");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+})
+
 .controller('LikeController', function($scope, TemplateService, NavigationService, $timeout) {
   //Used to name the .html file
   $scope.template = TemplateService.changecontent("like");

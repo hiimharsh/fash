@@ -18,6 +18,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
         templateUrl: "views/template.html",
         controller: 'HomeController'
     })
+    .state('mag', {
+        url: "/mag",
+        templateUrl: "views/template.html",
+        controller: 'MagController'
+    })
     .state('cart', {
         url: "/cart",
         templateUrl: "views/template.html",
