@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Exo+2|Lato:400,100,300,700,900);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
 
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
@@ -8,11 +8,12 @@
 
 /* Bootstrap Variables Goes Here */
 
-$brand-primary: #4d2261 !default;
-$brand-success: #d4a630 !default;
-$brand-warning: #ffec39 !default;
-$brand-danger: #fc483f !default;
-$brand-info: #000072 !default;
+$brand-primary: #cd3462 !default;
+$brand-success: #23916e !default;
+$brand-warning: #f2d458 !default;
+$brand-danger: #e75556 !default;
+$brand-info: #3f5a9f !default;
+$brand-orange: #e87846 !default;
 $black: #000000 !default;
 
 $font-color: #242424 !default;
@@ -28,8 +29,6 @@ $link-hover-decoration: none !default;
 
 $font-family-sans-serif: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif: "Lato", Georgia, "Times New Roman", Times, serif !default;
-$font-funky: "Lemonade", "Helvetiva Neue", Helvetica !default;
-$font-loading: "Exo 2", "Helvetiva Neue", Helvetica !default;
 
 $border-radius-base: 0 !default;
 $border-radius-large: 0 !default;
@@ -54,13 +53,21 @@ body {}
 .warning-bg { background-color: $brand-warning;}
 .danger-bg { background-color: $brand-danger;}
 .info-bg { background-color: $brand-info;}
+.orange-bg { background-color: $brand-orange; }
 
 .primary { color: $brand-primary; }
 .success { color: $brand-success; }
 .warning { color: $brand-warning; }
 .danger { color: $brand-danger; }
 .info { color: $brand-info; }
+.orange { color: $brand-orange; }
 .black { color: $black; }
+.white { color: white; }
+
+// Buttons
+.btn { border-radius: 0; }
+.btn-brand { @include button-variant($brand-primary, white, $brand-primary); }
+.btn-white { @include button-variant(white, transparent, white); }
 
 img.loading {
   text-align: center;
@@ -68,16 +75,9 @@ img.loading {
   width: 32px !important;
   height: auto;
 }
-img {
-  opacity: 0;
-  @include transition(all 300ms ease);
-}
-img.doneLoading {
-  opacity: 1;
-}
-nav li:hover .dropdown-menu {
-  display: block;
-}
+img { @include transition(all 300ms ease); }
+img.doneLoading { opacity: 1; }
+nav li:hover .dropdown-menu { display: block; }
 a { text-decoration: none; }
 
 /* Start writing sass here */
