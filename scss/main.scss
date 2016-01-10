@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
 
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
@@ -14,6 +15,7 @@ $brand-warning: #f2d458 !default;
 $brand-danger: #e75556 !default;
 $brand-info: #3f5a9f !default;
 $brand-orange: #e87846 !default;
+$brand-gray: #252525 !default;
 $black: #000000 !default;
 
 $font-color: #242424 !default;
@@ -27,8 +29,8 @@ $link-color: $font-color !default;
 $link-hover-color: $font-color !default;
 $link-hover-decoration: none !default;
 
-$font-family-sans-serif: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif: "Lato", Georgia, "Times New Roman", Times, serif !default;
+$font-family-sans-serif: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif: "Roboto", Georgia, "Times New Roman", Times, serif !default;
 
 $border-radius-base: 0 !default;
 $border-radius-large: 0 !default;
@@ -39,6 +41,8 @@ $google: #dd4d3c !default;
 $twitter: #49c8f5 !default;
 $instagram: #396d9a !default;
 
+@import "variables";
+
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
 * {
@@ -46,7 +50,7 @@ $instagram: #396d9a !default;
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {}
+body { font-family: $font-family-sans-serif; }
 
 .primary-bg { background-color: $brand-primary;}
 .success-bg { background-color: $brand-success;}
@@ -54,6 +58,9 @@ body {}
 .danger-bg { background-color: $brand-danger;}
 .info-bg { background-color: $brand-info;}
 .orange-bg { background-color: $brand-orange; }
+.gray-bg { background-color: $brand-gray; }
+.white-bg { background-color: white; }
+.black-bg { background-color: $black; }
 
 .primary { color: $brand-primary; }
 .success { color: $brand-success; }
@@ -61,13 +68,34 @@ body {}
 .danger { color: $brand-danger; }
 .info { color: $brand-info; }
 .orange { color: $brand-orange; }
+.gray { color: $brand-gray; }
 .black { color: $black; }
-.white { color: white; }
+.white {
+  color: white;
+  &:hover { color: white; }
+  &:active { color: white; }
+  &:focus { color: white; }
+}
 
 // Buttons
 .btn { border-radius: 0; }
-.btn-brand { @include button-variant($brand-primary, white, $brand-primary); }
-.btn-white { @include button-variant(white, transparent, white); }
+.btn-brand {
+  @include button-variant($brand-primary, white, $brand-primary);
+  border-width: 2px;
+  padding: 8px 25px;
+  font-size: 12px;
+  font-weight: bold;
+  transition: all 400ms ease;
+  &:hover { @include button-variant(white, $brand-primary, $brand-primary); }
+}
+.btn-light {
+  @include button-variant(white, transparent, white);
+  font-size: 10px;
+  font-weight: bold;
+  padding: 12px 25px;
+  transition: all 400ms ease;
+  &:hover { @include button-variant(black, white, white); }
+}
 
 img.loading {
   text-align: center;
@@ -79,5 +107,80 @@ img { @include transition(all 300ms ease); }
 img.doneLoading { opacity: 1; }
 nav li:hover .dropdown-menu { display: block; }
 a { text-decoration: none; }
-
+ul { list-style: none; padding: 0; }
+ul > li { display: inline-block; }
 /* Start writing sass here */
+
+// HEADER
+header {
+  @include size(100%, 100%);
+  padding: 20px 0 10px;
+  font-size: 12px;
+  .links { margin-top: 5px; }
+  .local-links { font-size: 18px; }
+  a { @extend .white; }
+  ul {
+    li { margin-right: 20px; }
+    li:last-child { margin: 0; }
+  }
+}
+
+// Footer
+footer {
+  padding: 20px 0 10px;
+  font-size: 16px;
+  a { @extend .white; }
+}
+
+// Home
+.home { background-color: #fbfbfb; }
+.header-nav {
+  box-shadow: 0px -5px 25px $brand-gray;
+  padding: 20px 0 10px;
+}
+.other-links {
+  font-size: 12px;
+  font-weight: bold;
+  ul {
+    li { margin-right: 20px; }
+    li:last-child { margin: 0; }
+  }
+}
+.home-main {
+  padding: 50px;
+  .home-block {
+    @include size(100%, 400px);
+    position: relative;
+    padding: 20px;
+    text-shadow: 0px 0px 1px $brand-gray;
+    transition: all 400ms ease;
+    &:hover { transform: scale(1.01); }
+    p {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    h2, h3, h4 {
+      @include size(60%, auto);
+      font-weight: 100;
+    }
+    h2 { font-size: 60px; }
+    h3 { font-size: 48px; }
+    h4 { font-size: 38px; }
+    .inner-block { @include position(absolute, auto auto 20px auto); }
+  }
+  .one {
+    &:hover { transform: scale(1.005); }
+  }
+  .one {
+    @include size(100%, 400px * 2);
+    @include back('home/1.png');
+  }
+  .two { @include back('home/2.jpg'); }
+  .three { @include back('home/3.jpg'); }
+  .four { @include back('home/4.png'); }
+  .five { @include back('home/5.jpg'); }
+  .six { @include back('home/6.jpg'); }
+  .seven { @include back('home/7.jpg'); }
+  .eight { @include back('home/8.png'); }
+  .nine { @include back('home/9.png'); }
+}

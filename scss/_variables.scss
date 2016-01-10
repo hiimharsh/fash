@@ -9,3 +9,27 @@ $brand-blue: #3f5a9f;
 $brand-green: #23916e;
 $brand-green-dark: #23916e;
 $brand-orange: #e87846;
+
+
+@mixin back($name, $size: cover, $pos: center center) {
+  background-image: url('../img/#{$name}');
+  background-size: $size;
+  background-position: $pos;
+}
+
+
+
+
+// ///////////////////////
+// RESET
+// ///////////////////////
+.home-main * {
+  margin: 0;
+  padding: 0;
+}
+.home-main {
+  .col-md-1, .col-md-2, .col-md-3,
+  .col-md-4, .col-md-5, .col-md-6,
+  .col-md-7, .col-md-8, .col-md-9,
+  .col-md-10, .col-md-11, .col-md-12 { padding: 2px; }
+}
