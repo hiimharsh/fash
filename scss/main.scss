@@ -184,3 +184,45 @@ footer {
   .eight { @include back('home/8.png'); }
   .nine { @include back('home/9.png'); }
 }
+
+.mag-section {
+  padding: 50px;
+  h2 {
+    margin-bottom: 30px;
+    font-size: 48px;
+    font-weight: bold;
+  }
+  .mag-block {
+    @include size(100%, 400px);
+    position: relative;
+    padding: 20px;
+    text-shadow: 0px 0px 1px $brand-gray;
+    transition: all 400ms ease;
+    h3 {
+      color: white;
+      opacity: 0;
+      display: inline-block;
+      @include position(absolute, auto auto -50px auto);
+    }
+    &:hover {
+      h3 {
+        opacity: 1;
+        @include position(absolute, auto auto 20px auto);
+        transition: all 400ms linear;
+      }
+    }
+  }
+
+  .mag-one { @include back('mag/1.png'); }
+  .mag-two { @include back('mag/2.jpg'); }
+  .mag-three { @include back('mag/3.png'); }
+  .mag-four { @include back('mag/4.png'); }
+  .mag-five { @include back('mag/5.png'); }
+  .mag-six { @include back('mag/6.jpg'); }
+  .mag-seven { @include back('mag/7.jpg'); }
+  .mag-eight { @include back('mag/8.png'); }
+  .mag-nine { @include back('mag/9.png'); }
+  .mag-ten { @include back('mag/10.png'); }
+  .mag-eleven { @include back('mag/1.png'); }
+  .mag-twelve { @include back('mag/3.png'); }
+}

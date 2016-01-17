@@ -6,3 +6,4 @@ production/
 *.zip
 img2/
 prepros.cfg
+css/main.css
