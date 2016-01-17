@@ -12,7 +12,10 @@
 .home-main .col-md-1, .home-main .col-md-2, .home-main .col-md-3,
 .home-main .col-md-4, .home-main .col-md-5, .home-main .col-md-6,
 .home-main .col-md-7, .home-main .col-md-8, .home-main .col-md-9,
-.home-main .col-md-10, .home-main .col-md-11, .home-main .col-md-12 {
+.home-main .col-md-10, .home-main .col-md-11, .home-main .col-md-12, .mag-section .col-md-1, .mag-section .col-md-2, .mag-section .col-md-3,
+.mag-section .col-md-4, .mag-section .col-md-5, .mag-section .col-md-6,
+.mag-section .col-md-7, .mag-section .col-md-8, .mag-section .col-md-9,
+.mag-section .col-md-10, .mag-section .col-md-11, .mag-section .col-md-12 {
   padding: 2px;
 }
 
@@ -8515,6 +8518,118 @@ footer {
 
 .home-main .nine {
   background-image: url("../img/home/9.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.mag-section {
+  padding: 50px;
+}
+
+.mag-section h2 {
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.mag-section .mag-block {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  padding: 20px;
+  text-shadow: 0px 0px 1px #252525;
+  transition: all 400ms ease;
+}
+
+.mag-section .mag-block h3 {
+  color: white;
+  opacity: 0;
+  display: inline-block;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: -50px;
+  left: auto;
+}
+
+.mag-section .mag-block:hover h3 {
+  opacity: 1;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 20px;
+  left: auto;
+  transition: all 400ms linear;
+}
+
+.mag-section .mag-one {
+  background-image: url("../img/mag/1.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.mag-section .mag-two {
+  background-image: url("../img/mag/2.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.mag-section .mag-three {
+  background-image: url("../img/mag/3.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.mag-section .mag-four {
+  background-image: url("../img/mag/4.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.mag-section .mag-five {
+  background-image: url("../img/mag/5.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.mag-section .mag-six {
+  background-image: url("../img/mag/6.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.mag-section .mag-seven {
+  background-image: url("../img/mag/7.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.mag-section .mag-eight {
+  background-image: url("../img/mag/8.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.mag-section .mag-nine {
+  background-image: url("../img/mag/9.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.mag-section .mag-ten {
+  background-image: url("../img/mag/10.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.mag-section .mag-eleven {
+  background-image: url("../img/mag/1.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.mag-section .mag-twelve {
+  background-image: url("../img/mag/3.png");
   background-size: cover;
   background-position: center center;
 }
