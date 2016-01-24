@@ -15,7 +15,10 @@
 .home-main .col-md-10, .home-main .col-md-11, .home-main .col-md-12, .mag-section .col-md-1, .mag-section .col-md-2, .mag-section .col-md-3,
 .mag-section .col-md-4, .mag-section .col-md-5, .mag-section .col-md-6,
 .mag-section .col-md-7, .mag-section .col-md-8, .mag-section .col-md-9,
-.mag-section .col-md-10, .mag-section .col-md-11, .mag-section .col-md-12 {
+.mag-section .col-md-10, .mag-section .col-md-11, .mag-section .col-md-12, .like .col-md-1, .like .col-md-2, .like .col-md-3,
+.like .col-md-4, .like .col-md-5, .like .col-md-6,
+.like .col-md-7, .like .col-md-8, .like .col-md-9,
+.like .col-md-10, .like .col-md-11, .like .col-md-12 {
   padding: 2px;
 }
 
@@ -8632,4 +8635,49 @@ footer {
   background-image: url("../img/mag/3.png");
   background-size: cover;
   background-position: center center;
+}
+
+.like {
+  padding-bottom: 100px;
+  background-color: #f9f9f9;
+}
+
+.like h2 {
+  margin: 50px 0;
+  font-size: 36px;
+  letter-spacing: 5px;
+}
+
+.like img {
+  border: 1px solid #ccc;
+}
+
+.like .like-icons {
+  margin-top: 2px;
+  padding: 10px 0;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+
+.like .like-icons a i {
+  font-size: 16px;
+}
+
+.like .like-detail {
+  margin-top: 20px;
+}
+
+.like .like-detail span {
+  display: block;
+}
+
+.like .like-detail span:first-child {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+
+.like .like-detail .cost {
+  font-size: 16px;
+  font-weight: bold;
 }
