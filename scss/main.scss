@@ -96,7 +96,6 @@ body { font-family: $font-family-sans-serif; }
   transition: all 400ms ease;
   &:hover { @include button-variant(black, white, white); }
 }
-
 img.loading {
   text-align: center;
   opacity: 1;
